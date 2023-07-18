@@ -7,6 +7,8 @@ const server = http.createServer((req, res) => {
 
   if (req.method === 'GET') {
     todoListService.getTodoList(req, res);
+  } else if (req.method === 'POST') {
+    todoListService.createTodoList(req, res);
   }
 });
 
