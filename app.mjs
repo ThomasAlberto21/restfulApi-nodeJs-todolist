@@ -11,6 +11,8 @@ const server = http.createServer((req, res) => {
     service.createTodoList(req, res);
   } else if (req.method === 'PUT') {
     service.updateTodoList(req, res);
+  } else if (req.method === 'DELETE') {
+    service.deleteTodoList(req, res);
   }
 });
 
